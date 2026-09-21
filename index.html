@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="서예린의 프론트엔드 개발자 포트폴리오"
+    />
+    <title>서예린 | Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="logo" href="#" aria-label="홈으로 이동">SY<span>.</span></a>
+        <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" aria-label="주요 메뉴">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="about">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">HELLO, I'M</p>
+            <h1>서예린<span>.</span><br /><em>디지털 경험을<br />만드는 개발자</em></h1>
+            <p class="intro">
+              사용자에게는 편리함을, 브랜드에는 선명한 인상을 남기는 웹을 만듭니다.
+              아이디어를 빠르고 아름다운 인터랙션으로 구현하는 프론트엔드 개발자입니다.
+            </p>
+            <a class="button button-primary" href="#projects">
+              프로젝트 살펴보기
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="hero-art reveal" aria-label="프로필 장식 이미지">
+            <div class="portrait-card">
+              <div class="portrait-glow"></div>
+              <div class="portrait-initials">SY</div>
+              <div class="portrait-caption">
+                <span>SEOUL, KR</span>
+                <span>2024 — PRESENT</span>
+              </div>
+            </div>
+            <div class="floating-note">Available for<br /><strong>new ideas</strong> ✦</div>
+          </div>
+        </section>
+
+        <section class="stats reveal" aria-label="경력 요약">
+          <div><strong>04+</strong><span>Years of experience</span></div>
+          <div><strong>24</strong><span>Projects shipped</span></div>
+          <div><strong>08</strong><span>Happy clients</span></div>
+        </section>
+
+        <section class="projects-section" id="projects">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">SELECTED WORKS</p>
+              <h2>좋은 생각을<br /><em>현실로</em> 만듭니다.</h2>
+            </div>
+            <p>작은 디테일부터 전체 흐름까지,<br />목적이 분명한 결과물을 고민합니다.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card project-card-dark reveal">
+              <div class="project-visual ecommerce-visual">
+                <span class="visual-label">01 / E-COMMERCE</span>
+                <div class="product-shape"></div>
+                <div class="visual-word">NOVA</div>
+              </div>
+              <div class="project-info">
+                <div><h3>Nova Market</h3><p>브랜드 커머스 플랫폼</p></div>
+                <a href="#contact" aria-label="Nova Market 프로젝트 문의">↗</a>
+              </div>
+            </article>
+            <article class="project-card project-card-lilac reveal">
+              <div class="project-visual finance-visual">
+                <span class="visual-label">02 / WEB APP</span>
+                <div class="chart-bars"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="balance">₩12,480,000</div>
+              </div>
+              <div class="project-info">
+                <div><h3>Flow Finance</h3><p>개인 자산 관리 서비스</p></div>
+                <a href="#contact" aria-label="Flow Finance 프로젝트 문의">↗</a>
+              </div>
+            </article>
+            <article class="project-card project-card-orange reveal">
+              <div class="project-visual culture-visual">
+                <span class="visual-label">03 / BRANDING</span>
+                <div class="culture-circle">CULTURE<br />CONNECT</div>
+                <div class="culture-line"></div>
+              </div>
+              <div class="project-info">
+                <div><h3>Culture Connect</h3><p>아트 페스티벌 아이덴티티</p></div>
+                <a href="#contact" aria-label="Culture Connect 프로젝트 문의">↗</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-section reveal" id="contact">
+          <div>
+            <p class="eyebrow">LET'S TALK</p>
+            <h2>함께 멋진 것을<br /><em>만들어볼까요?</em></h2>
+          </div>
+          <form class="contact-form">
+            <label>
+              이름
+              <input type="text" name="name" placeholder="홍길동" required />
+            </label>
+            <label>
+              이메일
+              <input type="email" name="email" placeholder="hello@example.com" required />
+            </label>
+            <label>
+              하고 싶은 이야기
+              <textarea name="message" rows="3" placeholder="프로젝트에 대해 알려주세요." required></textarea>
+            </label>
+            <button class="button button-light" type="submit">메시지 보내기 <span>↗</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> SEO YERIN. ALL RIGHTS RESERVED.</p>
+        <div>
+          <a href="mailto:hello@seoyerin.dev">EMAIL</a>
+          <a href="#" aria-label="LinkedIn">LINKEDIN</a>
+          <a href="#" aria-label="GitHub">GITHUB</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
