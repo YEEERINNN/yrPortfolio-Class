@@ -6,6 +6,7 @@
   --lilac: #d8c9ff;
   --orange: #ff704e;
   --line: rgba(23, 23, 25, 0.14);
+  --text-gradient: linear-gradient(110deg, #ef5d43, #8c62dc 52%, #008e8a);
 }
 
 * { box-sizing: border-box; }
@@ -14,7 +15,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--cream);
-  font-family: "Brush Script MT", "Segoe Print", cursive;
+  font-family: "Gaegu", "Brush Script MT", "Segoe Print", cursive;
   font-size: 1.08rem;
   line-height: 1.5;
 }
@@ -22,7 +23,7 @@ a { color: inherit; text-decoration: none; }
 .page-shell { max-width: 1320px; margin: auto; padding: 0 5vw; overflow: hidden; }
 .site-header { height: 96px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
 .logo {
-  font: 700 1.65rem "Brush Script MT", "Segoe Print", cursive;
+  font: 700 1.65rem "Gaegu", "Brush Script MT", "Segoe Print", cursive;
   letter-spacing: -0.08em;
   background: linear-gradient(110deg, #ff704e, #aa70ff 48%, #08a7a1);
   -webkit-background-clip: text;
@@ -39,7 +40,7 @@ a { color: inherit; text-decoration: none; }
 .project-info p,
 .site-footer,
 .contact-form label {
-  background: linear-gradient(110deg, #ef5d43, #8c62dc 52%, #008e8a);
+  background: var(--text-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -50,7 +51,7 @@ a { color: inherit; text-decoration: none; }
 .eyebrow { margin: 0 0 1.3rem; color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .2em; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2 {
-  font: 700 clamp(3.6rem, 7vw, 7.4rem)/.92 "Brush Script MT", "Segoe Print", cursive;
+  font: 700 clamp(3.6rem, 7vw, 7.4rem)/.92 "Gaegu", "Brush Script MT", "Segoe Print", cursive;
   letter-spacing: -.08em;
   background: linear-gradient(110deg, #ff704e 5%, #b76cff 48%, #08a7a1 95%);
   -webkit-background-clip: text;
@@ -59,7 +60,7 @@ h1, h2 {
 }
 h1 em, h2 em { color: var(--orange); font-style: normal; }
 .intro { max-width: 450px; margin: 2.1rem 0; color: var(--muted); font-size: 1.14rem; }
-.button { display: inline-flex; align-items: center; gap: 2rem; border: 0; border-radius: 100px; padding: 1.1rem 1.35rem 1.1rem 1.55rem; font-family: "Brush Script MT", "Segoe Print", cursive; font-weight: 700; font-size: 1rem; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.button { display: inline-flex; align-items: center; gap: 2rem; border: 0; border-radius: 100px; padding: 1.1rem 1.35rem 1.1rem 1.55rem; font-family: "Gaegu", "Brush Script MT", "Segoe Print", cursive; font-weight: 700; font-size: 1rem; cursor: pointer; transition: transform .2s, box-shadow .2s; }
 .button:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(23,23,25,.13); }
 .button span { font-size: 1.1rem; }
 .button-primary { background: var(--lime); }
@@ -73,7 +74,7 @@ h1 em, h2 em { color: var(--orange); font-style: normal; }
 .stats { display: flex; gap: 5rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2rem 0; }
 .stats div { display: flex; align-items: baseline; gap: .75rem; }
 .stats strong {
-  font: 600 2rem "Brush Script MT", "Segoe Print", cursive;
+  font: 600 2rem "Gaegu", "Brush Script MT", "Segoe Print", cursive;
   background: linear-gradient(110deg, #ff704e, #9a64df 50%, #008e8a);
   -webkit-background-clip: text;
   background-clip: text;
