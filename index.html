@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gaegu:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -115,21 +115,22 @@
             <p class="eyebrow">LET'S TALK</p>
             <h2>함께 멋진 것을<br /><em>만들어볼까요?</em></h2>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" novalidate>
             <label>
               이름
-              <input type="text" name="name" placeholder="홍길동" required />
+              <input type="text" name="name" placeholder="홍길동" autocomplete="name" maxlength="100" required />
             </label>
             <label>
               이메일
-              <input type="email" name="email" placeholder="hello@example.com" required />
+              <input type="email" name="email" placeholder="hello@example.com" autocomplete="email" maxlength="254" required />
             </label>
             <label>
               하고 싶은 이야기
-              <textarea name="message" rows="3" placeholder="프로젝트에 대해 알려주세요." required></textarea>
+              <textarea name="message" rows="3" placeholder="프로젝트에 대해 알려주세요." maxlength="2000" required></textarea>
             </label>
-            <button class="button button-light" type="submit">메시지 보내기 <span>↗</span></button>
-            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">데모용 양식으로 실제 이메일은 전송되지 않습니다.</p>
+            <button class="button button-light" type="submit">문의 내용 확인 <span>↗</span></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </section>
       </main>
