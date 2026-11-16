@@ -1,4 +1,5 @@
 const menuToggle = document.querySelector(".menu-toggle");
+const themeToggle = document.querySelector(".theme-toggle");
 const nav = document.querySelector(".nav");
 const year = document.querySelector("#year");
 const contactForm = document.querySelector(".contact-form");
@@ -11,6 +12,34 @@ const emailPattern =
   /^[a-z\d!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z\d!#$%&'*+/=?^_`{|}~-]+)*@[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i;
 
 year.textContent = new Date().getFullYear();
+
+const savedTheme = localStorage.getItem("portfolio-theme");
+const initialTheme = savedTheme === "dark" ? "dark" : "light";
+document.documentElement.dataset.theme = initialTheme;
+updateThemeToggle(initialTheme);
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme =
+    document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = nextTheme;
+  localStorage.setItem("portfolio-theme", nextTheme);
+  updateThemeToggle(nextTheme);
+});
+
+function updateThemeToggle(theme) {
+  const isDark = theme === "dark";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.setAttribute(
+    "aria-label",
+    isDark ? "라이트 모드로 전환" : "다크 모드로 전환"
+  );
+  themeToggle.querySelector(".theme-toggle-label").textContent = isDark
+    ? "Light mode"
+    : "Dark mode";
+  themeToggle.querySelector("[aria-hidden='true']").textContent = isDark
+    ? "☀"
+    : "☾";
+}
 
 menuToggle.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("open");
